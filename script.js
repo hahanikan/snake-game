@@ -31,6 +31,8 @@ function update() {
     if (head.x === food.x && head.y === food.y) {
         score++;
         placeFood();
+        // 吃到食物时增加两个长度
+        snake.unshift({x: head.x + direction.x, y: head.y + direction.y});
     } else {
         snake.pop();
     }
